@@ -71,16 +71,21 @@ video_frame_extractor/
 └── videos/              <-- Input directory for your video files (create this folder)
 
 ```
+
 #### 2. Environment Variables
+
 Create a file named .env in the root of your video_frame_extractor directory. This file will store your configuration paths.
 
 .env content:
 Code snippet
+.env file for Video Frame Extractor
 
+```python
 # .env file for Video Frame Extractor
 
-# Path to the directory containing your source video files
+#   Path to the directory containing your source video files
 # Use double backslashes (\\) or forward slashes (/) for Windows paths
+
 VIDEO_SOURCE_DIR="C:\\Users\\your_folder_where_videos_stored\\videos"
 
 # Base directory where extracted frames will be stored (subfolders created per video)
@@ -88,15 +93,20 @@ VIDEO_SOURCE_DIR="C:\\Users\\your_folder_where_videos_stored\\videos"
 OUTPUT_BASE_DIR="C:\\Users\\your_folder_where_videos_stores_frames\\frames"
 
 # Desired frame rate for extraction (e.g., 1 for 1 frame per second)
-# Set to 0 or leave empty to extract all frames
+Set to 0 or leave empty to extract all frames
+
 DESIRED_FRAME_RATE=0
-Important: Replace the example paths with the actual paths on your system.
+# Important: Replace the example paths with the actual paths on your system.
+```
 
 #### 3. Place Your Videos
+
 Put your video files (e.g., .mp4, .avi, .mov) into the directory specified by VIDEO_SOURCE_DIR in your .env file. Based on the example, this is: C:\Users\Chaitanya\Desktop\Chaitanya Work\Docs\My_Docs\video_frame_extractor\videos
 
-How to Run the Script
+How to Run the Script:
+
 Activate your virtual environment (if you haven't already):
+
 ```python
 
 Windows: .\venv\Scripts\activate
