@@ -101,7 +101,7 @@ DESIRED_FRAME_RATE=0
 
 #### 3. Place Your Videos
 
-Put your video files (e.g., .mp4, .avi, .mov) into the directory specified by VIDEO_SOURCE_DIR in your .env file. Based on the example, this is: C:\Users\Chaitanya\Desktop\Chaitanya Work\Docs\My_Docs\video_frame_extractor\videos
+Put your video files (e.g., .mp4, .avi, .mov) into the directory specified by VIDEO_SOURCE_DIR in your .env file. Based on the example, this is: C:\Users\your_folder_where_videos_stored\videos
 
 How to Run the Script:
 
@@ -118,7 +118,7 @@ macOS/Linux: source venv/bin/activate
 
 ```python
 Navigate to the project's root directory in your terminal:
-cd "C:\Users\Chaitanya\Desktop\Chaitanya Work\Docs\My_Docs\video_frame_extractor"
+cd "C:\Users\your_root_folder\video_frame_extractor"
 ```
 
 ```python
@@ -130,7 +130,9 @@ The script will print progress messages to the console, indicating which videos 
 
 #### Output Structure
 
-After execution, your OUTPUT_BASE_DIR (e.g., C:\Users\Chaitanya\Desktop\Chaitanya Work\Docs\My_Docs\video_frame_extractor\frames) will contain subfolders, one for each processed video:
+After execution, your OUTPUT_BASE_DIR (e.g., C:\Users\your_folder_where_videos_stores_frames\frames) will contain subfolders, one for each processed video:
+
+```
 
 frames/
 ├── video_file_1_name/
@@ -141,3 +143,5 @@ frames/
     ├── frame_000000.jpg
     ├── frame_000001.jpg
     └── ...
+
+    ```
