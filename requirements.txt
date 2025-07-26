@@ -1,3 +1,4 @@
 opencv-python
 moviepy
 python-dotenv
+moviepy
