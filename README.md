@@ -31,6 +31,7 @@ python -m venv venv
 Windows:
 
 .\venv\Scripts\activate
+
 macOS/Linux:
 
 source venv/bin/activate
@@ -38,6 +39,10 @@ source venv/bin/activate
 ```
 
 (You'll see (venv) at the beginning of your terminal prompt, indicating the virtual environment is active.)
+
+```python
+(venv) C:\Users\root_folder\video_frame_extractor> python .\video_frame_extractor.py
+```
 
 ### 3. Install Dependencies
 
@@ -57,9 +62,9 @@ moviepy # Only required if you use the dummy video creation feature
 
 #### 1. Project Structure
 
-Your project directory (video_frame_extractor) should be structured as follows:
+```python
 
-```
+Your project directory (video_frame_extractor) should be structured as follows:
 
 video_frame_extractor/
 ├── .env                 <-- Environment variables (create this file)
@@ -118,12 +123,16 @@ macOS/Linux: source venv/bin/activate
 
 ```python
 Navigate to the project's root directory in your terminal:
+
 cd "C:\Users\your_root_folder\video_frame_extractor"
+
 ```
 
 ```python
 Run the script:
-python .\video_frame_extractor.py
+
+(venv) C:\Users\root_folder\video_frame_extractor> python video_frame_extractor.py
+
 ```
 
 The script will print progress messages to the console, indicating which videos are being processed and where their frames are being saved.
