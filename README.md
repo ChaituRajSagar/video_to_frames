@@ -1,5 +1,3 @@
-```
-
 # Video Frame Extractor
 
 This Python script uses OpenCV to extract frames from multiple video files located in a specified directory and saves them as individual image files into an organized output structure.
@@ -20,30 +18,48 @@ Before you begin, ensure you have Python installed (Python 3.6+ is recommended).
 
 It's good practice to use a virtual environment to manage project dependencies.
 
+```python
 
 python -m venv venv
-2. Activate the Virtual Environment
-Windows:
 
-Bash
+```
+
+### 2. Activate the Virtual Environment
+
+```python
+
+Windows:
 
 .\venv\Scripts\activate
 macOS/Linux:
 
 source venv/bin/activate
+
+```
+
 (You'll see (venv) at the beginning of your terminal prompt, indicating the virtual environment is active.)
 
-3. Install Dependencies
+### 3. Install Dependencies
+
 Install the necessary Python libraries using pip:
+
+```python
 
 pip install -r requirements.txt
 requirements.txt content:
 opencv-python
 python-dotenv
 moviepy # Only required if you use the dummy video creation feature
-Setup and Configuration
-1. Project Structure
+
+```
+
+### Setup and Configuration
+
+#### 1. Project Structure
+
 Your project directory (video_frame_extractor) should be structured as follows:
+
+```
 
 video_frame_extractor/
 ├── .env                 <-- Environment variables (create this file)
@@ -53,7 +69,9 @@ video_frame_extractor/
 ├── venv/                <-- Python virtual environment (created by `python -m venv venv`)
 ├── frames/              <-- Output directory for extracted frames (created by script)
 └── videos/              <-- Input directory for your video files (create this folder)
-2. Create and Configure .env File
+
+```
+#### 2. Environment Variables
 Create a file named .env in the root of your video_frame_extractor directory. This file will store your configuration paths.
 
 .env content:
@@ -63,40 +81,45 @@ Code snippet
 
 # Path to the directory containing your source video files
 # Use double backslashes (\\) or forward slashes (/) for Windows paths
-VIDEO_SOURCE_DIR="C:\\Users\\Chaitanya\\Desktop\\Chaitanya Work\\Docs\\My_Docs\\video_frame_extractor\\videos"
+VIDEO_SOURCE_DIR="C:\\Users\\your_folder_where_videos_stored\\videos"
 
 # Base directory where extracted frames will be stored (subfolders created per video)
 # Use double backslashes (\\) or forward slashes (/) for Windows paths
-OUTPUT_BASE_DIR="C:\\Users\\Chaitanya\\Desktop\\Chaitanya Work\\Docs\\My_Docs\\video_frame_extractor\\frames"
+OUTPUT_BASE_DIR="C:\\Users\\your_folder_where_videos_stores_frames\\frames"
 
 # Desired frame rate for extraction (e.g., 1 for 1 frame per second)
 # Set to 0 or leave empty to extract all frames
 DESIRED_FRAME_RATE=0
 Important: Replace the example paths with the actual paths on your system.
 
-3. Place Your Videos
+#### 3. Place Your Videos
 Put your video files (e.g., .mp4, .avi, .mov) into the directory specified by VIDEO_SOURCE_DIR in your .env file. Based on the example, this is: C:\Users\Chaitanya\Desktop\Chaitanya Work\Docs\My_Docs\video_frame_extractor\videos
 
 How to Run the Script
 Activate your virtual environment (if you haven't already):
+```python
 
 Windows: .\venv\Scripts\activate
+```
 
+```python
 macOS/Linux: source venv/bin/activate
+```
 
+```python
 Navigate to the project's root directory in your terminal:
-
-Bash
-
 cd "C:\Users\Chaitanya\Desktop\Chaitanya Work\Docs\My_Docs\video_frame_extractor"
+```
+
+```python
 Run the script:
-
-Bash
-
 python .\video_frame_extractor.py
+```
+
 The script will print progress messages to the console, indicating which videos are being processed and where their frames are being saved.
 
-Output Structure
+#### Output Structure
+
 After execution, your OUTPUT_BASE_DIR (e.g., C:\Users\Chaitanya\Desktop\Chaitanya Work\Docs\My_Docs\video_frame_extractor\frames) will contain subfolders, one for each processed video:
 
 frames/
