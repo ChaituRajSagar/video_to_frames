@@ -1,0 +1,22 @@
+# Python specific ignores
+__pycache__/
+*.pyc
+.env
+
+# Dependencies
+venv/
+env/
+v2f/
+
+# IDE specific files
+.vscode/ # If using VS Code
+.idea/   # If using PyCharm
+
+# Generated files
+# This is CRITICAL. DO NOT commit extracted frames.
+frames/
+extracted_frames/ # If you used this name previously
+videos/
+
+# If you create dummy videos in the source dir, also ignore them
+dummy_input_video.mp4
